@@ -27,7 +27,7 @@
   
 ### ✍️ Random Dev Quote  (reloaded every time the page is refreshed)
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=radical)
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
+
 
 
 ### 😂 Random Dev Meme (reloaded every time the page is refreshed)
