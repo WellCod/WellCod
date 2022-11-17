@@ -52,9 +52,6 @@ Other:
 
 
 
-### 😂 Random Dev Meme (reloaded every time the page is refreshed)
-<img src="https://random-memer.herokuapp.com/" width="512px"/>
-
 ---
 [![](https://visitcount.itsvg.in/api?id=WellCod&icon=5&color=4)](https://visitcount.itsvg.in)
 
