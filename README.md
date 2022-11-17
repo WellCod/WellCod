@@ -1,6 +1,6 @@
 
 ## 🌐 About me:
-
+ - Olá,✌
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/wellcod/) 
@@ -45,9 +45,7 @@ Other:
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=WellCod&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=WellCod&theme=dracula&no-frame=false&no-bg=false&margin-w=4)
-  
+
   
 ### ✍️ Random Dev Quote  (reloaded every time the page is refreshed)
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=radical)
