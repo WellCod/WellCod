@@ -42,8 +42,9 @@ Other:
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=WellCod&theme=dracula&hide_border=false&include_all_commits=true&count_private=true)
 ![](https://github-readme-streak-stats.herokuapp.com/?user=WellCod&theme=dracula&hide_border=false)<br/>
+<h1 align="center" dit="auto"> 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=WellCod&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
+</h1>
 
 
   
