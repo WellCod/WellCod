@@ -1,6 +1,6 @@
 
 ## 🌐 About me:
- - Olá,✌
+ - Olá ✌, atualmente estudando mais afundo JS e React.
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/wellcod/) 
