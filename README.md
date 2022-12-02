@@ -51,8 +51,6 @@ Other:
 
 
   
-### ✍️ Random Dev Quote  (reloaded every time the page is refreshed)
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=radical)
 
 
 
