@@ -1,7 +1,7 @@
 
 ## 🌐 About me:
  - Olá ✌ me chamo Weslley tenho 31 anos e durante o ano de 2022 em plena pandemia resolvi dar uma reviravolta na vida (antes tarde do que nunca!!!), joguei para o alto 8 anos na área de HelpDesk, onde passei por diversas áreas como: rede, infra, segurança, administração de sistemas, telecom, manutenção em DataCenter e por aí vai, porém sempre me senti infeliz e insatisfeito tanto profissionalmente como pessoalmente.
-No momento dei um grande passo para traz para dar um salto enorme no futuro, no inicio esse passo para traz me trouxe uma imensa vergonha (me tornei um motorista de aplicativo temporário) por orgulho, hoje superei essa faze e faço uber durante o dia para pagar as contas e estudo arduamente todo o tempo que tenho com o foco de conseguir o tão esperado ‘SIM’
+No momento dei um grande passo para traz para dar um salto enorme no futuro, hoje superei essa faze e estudo arduamente todo o tempo que tenho com o foco de conseguir o tão esperado ‘SIM’
 No momento estou me aprofundando em JS e React !
 Abaixo segue um pouco sobre minhas HardSkills
 
