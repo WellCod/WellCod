@@ -6,8 +6,11 @@ No momento estou me aprofundando em JS e React !
 Abaixo segue um pouco sobre minhas HardSkills
 
 
-E caso possa me ajudar, me adicione lá no linkedin, isso já vai ajudar um bucado rsrs : 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/wellcod/) 
+E caso queira me ajudar, me adicione lá no linkedin, isso já vai ajudar um bucado rsrs : 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/wellcod/)
+
+Caso queira acompanhar a minha evolução nos estudos da uma olhadinha:
+https://cursos.alura.com.br/vitrinedev/weslleygoncalves18
 
 
 # 💻 Tech Stack:
