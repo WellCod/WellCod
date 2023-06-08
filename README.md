@@ -1,9 +1,19 @@
 
 ## 🌐 About me:
- - Olá ✌ me chamo Weslley tenho 31 anos e durante o ano de 2022 em plena pandemia resolvi dar uma reviravolta na vida (antes tarde do que nunca!!!), joguei para o alto 8 anos na área de HelpDesk, onde passei por diversas áreas como: rede, infra, segurança, administração de sistemas, telecom, manutenção em DataCenter e por aí vai, porém sempre me senti infeliz e insatisfeito tanto profissionalmente como pessoalmente.
-No momento dei um grande passo para traz para dar um salto enorme no futuro, hoje superei essa faze e estudo arduamente todo o tempo que tenho com o foco de conseguir o tão esperado ‘SIM’
-No momento estou me aprofundando em JS e React !
-Abaixo segue um pouco sobre minhas HardSkills
+Olá! ✌ Meu nome é Weslley e tenho 31 anos. Sou um profissional da área de HelpDesk com ampla experiência em diversas áreas, como redes, infraestrutura, segurança, administração de sistemas, telecomunicações e manutenção de DataCenter.
+
+Durante minha jornada, desenvolvi habilidades sólidas nessas áreas e busquei constantemente me aprimorar. Recentemente, decidi direcionar meus esforços para me aprofundar em JS e React, duas tecnologias que considero fascinantes no desenvolvimento web.
+
+Aqui está um resumo das minhas habilidades técnicas:
+
+-Desenvolvimento e manutenção de redes
+- infraestrutura de TI
+- Segurança da informação
+- Administração de sistemas
+- Telecomunicações
+- Manutenção de DataCenter
+
+Estou sempre em busca de novas oportunidades desafiadoras, nas quais posso aplicar meu conhecimento e continuar aprendendo. Se você estiver interessado em colaborar, discutir projetos ou oportunidades de trabalho, fique à vontade para entrar em contato comigo. Estou animado para construir um futuro de sucesso!
 
 
 E caso queira me ajudar, me adicione lá no linkedin, isso já vai ajudar um bucado rsrs : 
