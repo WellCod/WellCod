@@ -6,7 +6,7 @@ Durante minha jornada, desenvolvi habilidades sólidas nessas áreas e busquei c
 
 Aqui está um resumo das minhas habilidades técnicas:
 
--Desenvolvimento e manutenção de redes
+- Desenvolvimento e manutenção de redes
 - infraestrutura de TI
 - Segurança da informação
 - Administração de sistemas
