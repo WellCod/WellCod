@@ -42,12 +42,3 @@ que costumam faltar: leio log antes de chutar, penso em failure mode, e trato
 credencial e dado pessoal como responsabilidade, não como detalhe de configuração.
 
 ---
-
-## 📊 GitHub
-
-<!-- Verifique se cada badge está carregando antes de publicar.
-     O github-readme-streak-stats migrou do Heroku para streak-stats.demolab.com -->
-
-![Estatísticas](https://github-readme-stats.vercel.app/api?username=WellCod&theme=dracula&hide_border=false&include_all_commits=true&count_private=true)
-
-![Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=WellCod&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
