@@ -60,6 +60,3 @@ redes, servidores, DataCenter, telecom e segurança. Isso me deixou com hábitos
 que costumam faltar — leio log antes de chutar, penso em *failure mode*, e trato
 credencial e dado pessoal como responsabilidade, não como detalhe de
 configuração.
-
-É de onde vem o que faço hoje: sistema que alguém precisa manter de pé às três da
-manhã.
