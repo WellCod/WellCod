@@ -17,9 +17,9 @@ pensados desde a primeira linha, não como etapa final.
 
 Plataforma que cota o mesmo risco em várias seguradoras e compara os resultados.
 Cada seguradora entra como *adapter* isolado atrás de um contrato único, então
-integrar a próxima não toca o domínio. Integração real em produção com API
-externa: JWT ES256, fila de trabalho no próprio Postgres, RLS por corretora e
-auditoria append-only.
+integrar a próxima não toca o domínio. Integração exercitada contra a API real de
+uma seguradora: JWT ES256, fila de trabalho no próprio Postgres, RLS por
+corretora e auditoria append-only.
 
 `Python` · `FastAPI` · `PostgreSQL` · `React` · `TypeScript` · `Docker`
 
@@ -47,7 +47,7 @@ costuma ser editado no escuro.
 |---|---|
 | **Backend** | Python · FastAPI · Node.js · Express |
 | **Frontend** | TypeScript · JavaScript · React · Next.js · Tailwind CSS |
-| **Dados** | PostgreSQL · SQLite · MongoDB |
+| **Dados** | PostgreSQL · Redis · SQLite · MongoDB |
 | **Infra & DevOps** | Docker · Docker Compose · Nginx · Linux · GitHub Actions |
 | **Fundamentos** | Redes (TCP/IP, DNS, VPN) · Segurança da informação · LGPD |
 
