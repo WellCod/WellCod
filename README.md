@@ -9,6 +9,30 @@ pensados desde a primeira linha, não como etapa final.
 
 [LinkedIn](https://linkedin.com/in/wellcod) · weslleygoncalves18@gmail.com
 
+**Aberto a oportunidades** como Software Engineer backend ou full stack —
+remoto ou híbrido em São Paulo. Para recrutadores: os três projetos abaixo são
+meus, do zero, e o histórico de commits é público.
+
+<details>
+<summary><b>In English</b></summary>
+
+<br>
+
+Software Engineer, backend and full stack, based in São Paulo, Brazil.
+
+More than a decade running infrastructure, networks and security before writing
+software. I build with **Python/FastAPI** and **TypeScript/React**, and I treat
+deployment, observability and sensitive-data handling as part of the first
+commit rather than a final step.
+
+**Open to opportunities** — remote, or hybrid in São Paulo.
+
+The three projects below are my own work: an insurance multi-quoting platform
+integrating real insurer APIs, a fully local face authentication service with
+liveness detection, and a control panel for running LLM agents in production.
+
+</details>
+
 ---
 
 ## Projetos
