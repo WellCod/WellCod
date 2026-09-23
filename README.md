@@ -1,6 +1,6 @@
 # Weslley Gonçalves
 
-**Software Engineer** · Backend & Full Stack · São Paulo, SP
+**Software Engineer** · Full Stack · São Paulo, SP
 
 Mais de uma década sustentando infraestrutura, redes e segurança antes de
 escrever software. Hoje construo aplicações em **Python/FastAPI** e
