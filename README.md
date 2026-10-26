@@ -31,7 +31,8 @@ are part of the first commit rather than a final step.
 The projects below are my own work: a platform to operate AI agents in
 production (versioned agents, multi-agent teams, workflows, RAG, MCP,
 guardrails and per-agent test suites with an LLM judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs,
-and a fully local face authentication service with liveness detection.
+a fully local face authentication service with liveness detection, and a
+GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
 
 </details>
 
@@ -81,6 +82,17 @@ local**. Sobe com um `docker compose up` e nenhum frame sai da máquina. Dado
 biométrico é dado sensível, e tratar assim é requisito, não enfeite.
 
 `Python` · `FastAPI` · `DeepFace/ArcFace` · `MediaPipe` · `Docker`
+
+### [k-voice](https://github.com/WellCod/k-voice) — servidor de síntese de voz com streaming em GPU
+
+Servidor TTS construído do zero: roda modelos abertos em GPU, entrega PCM em
+tempo real via WebSocket para agentes de voz no LiveKit e gera OGG/Opus em lote
+para mensagens de voz. Normalização de texto pt-BR determinística (moeda, datas,
+CPF, siglas), catálogo de vozes com clonagem, plugin para LiveKit Agents com
+cancelamento imediato em barge-in, fallback automático e servidor MCP para
+agentes de IA pedindo áudio. Motor principal: Qwen3-TTS (Apache-2.0).
+
+`Python` · `FastAPI` · `PyTorch + CUDA` · `Qwen3-TTS` · `LiveKit Agents` · `PostgreSQL` · `S3` · `MCP` · `Docker`
 
 ---
 
