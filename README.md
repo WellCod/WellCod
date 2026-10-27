@@ -50,7 +50,6 @@ algo regride. Por cima disso vêm bases de conhecimento (RAG), ferramentas via M
 com confirmação humana, guardrails de dado pessoal e injeção de prompt, e
 analytics de latência e custo por execução.
 
-<a href="https://github.com/WellCod/automata"><img src="https://raw.githubusercontent.com/WellCod/automata/main/docs/img/workflow.png" alt="Editor de workflow do Automata" width="820"></a>
 
 - **Multi-agente:** times que coordenam, roteiam (handoff) ou consultam
   especialistas, e workflows com etapas em paralelo, condições e repetição.
