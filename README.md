@@ -84,15 +84,18 @@ biométrico é dado sensível, e tratar assim é requisito, não enfeite.
 
 ### [k-voice](https://github.com/WellCod/k-voice) — servidor de síntese de voz com streaming em GPU
 
-Servidor TTS construído do zero para substituir a ElevenLabs: roda modelos
-abertos em GPU, entrega PCM em tempo real via WebSocket para agentes de voz no
-LiveKit e gera OGG/Opus em lote para mensagens de voz. Normalização pt-BR
-determinística (moeda, datas, CPF, siglas), catálogo de vozes com clonagem a
-partir de áudio de referência e consentimento LGPD registrado, dicionário de
-pronúncia por cliente, plugin para LiveKit Agents com cancelamento imediato em
-barge-in, roteamento por cliente com fallback automático, servidor MCP para
-agentes de IA pedindo áudio e API compatível com a ElevenLabs — a troca é só
-trocar a URL base e a chave. Motor principal: Qwen3-TTS (Apache-2.0).
+Servidor TTS construído do zero para substituir a ElevenLabs: roda o Qwen3-TTS
+em GPU, entrega PCM em tempo real via WebSocket para agentes de voz no LiveKit
+e gera OGG/Opus em lote para mensagens de voz. Clonagem de voz a partir de
+áudio de referência com pré-processamento automático (loudnorm + trim de
+silêncio via ffmpeg, mínimo 5 s de fala limpa), consentimento LGPD registrado
+e instrução de estilo editável por voz. Normalização pt-BR determinística —
+moeda, datas, CPF/CNPJ, CEP, telefone, siglas, percentagens, decimais e
+palavras nativas (PIX, TV, LED). Segmentação por sentença antes da síntese
+para preservar prosódia em textos longos. Dicionário de pronúncia por cliente,
+roteamento com fallback para ElevenLabs, servidor MCP e API compatível com a
+ElevenLabs. Painel demo em `/demo` com anel de progresso adaptativo e
+recuperação de sessão após reload.
 
 `Python` · `FastAPI` · `PyTorch + CUDA` · `Qwen3-TTS` · `LiveKit Agents` · `PostgreSQL` · `S3` · `MCP` · `Docker`
 
@@ -121,3 +124,4 @@ trocar a URL base e a chave. Motor principal: Qwen3-TTS (Apache-2.0).
 | **Dados** | PostgreSQL · pgvector · Redis · SQLite · MongoDB |
 | **Infra e DevOps** | Docker · Docker Compose · Nginx · Linux · GitHub Actions |
 | **Fundamentos** | Redes (TCP/IP, DNS, VPN) · Segurança da informação · LGPD |
+
