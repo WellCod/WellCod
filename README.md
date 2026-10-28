@@ -84,12 +84,15 @@ biométrico é dado sensível, e tratar assim é requisito, não enfeite.
 
 ### [k-voice](https://github.com/WellCod/k-voice) — servidor de síntese de voz com streaming em GPU
 
-Servidor TTS construído do zero: roda modelos abertos em GPU, entrega PCM em
-tempo real via WebSocket para agentes de voz no LiveKit e gera OGG/Opus em lote
-para mensagens de voz. Normalização de texto pt-BR determinística (moeda, datas,
-CPF, siglas), catálogo de vozes com clonagem, plugin para LiveKit Agents com
-cancelamento imediato em barge-in, fallback automático e servidor MCP para
-agentes de IA pedindo áudio. Motor principal: Qwen3-TTS (Apache-2.0).
+Servidor TTS construído do zero para substituir a ElevenLabs: roda modelos
+abertos em GPU, entrega PCM em tempo real via WebSocket para agentes de voz no
+LiveKit e gera OGG/Opus em lote para mensagens de voz. Normalização pt-BR
+determinística (moeda, datas, CPF, siglas), catálogo de vozes com clonagem a
+partir de áudio de referência e consentimento LGPD registrado, dicionário de
+pronúncia por cliente, plugin para LiveKit Agents com cancelamento imediato em
+barge-in, roteamento por cliente com fallback automático, servidor MCP para
+agentes de IA pedindo áudio e API compatível com a ElevenLabs — a troca é só
+trocar a URL base e a chave. Motor principal: Qwen3-TTS (Apache-2.0).
 
 `Python` · `FastAPI` · `PyTorch + CUDA` · `Qwen3-TTS` · `LiveKit Agents` · `PostgreSQL` · `S3` · `MCP` · `Docker`
 
