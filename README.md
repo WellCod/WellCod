@@ -29,8 +29,9 @@ networks and security, so deployment, observability and sensitive-data handling
 are part of the first commit rather than a final step.
 
 The projects below are my own work: a platform to operate AI agents in
-production (versioned agents, multi-agent teams, workflows, RAG, MCP,
-guardrails and per-agent test suites with an LLM judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs,
+production (versioned agents, multi-agent teams, workflows with human review,
+RAG with source connectors, MCP, guardrails, cost controls and per-agent test
+suites with an LLM judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs,
 a fully local face authentication service with liveness detection, and a
 GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
 
@@ -46,21 +47,24 @@ Quem não programa cria, testa e publica agentes, times multi-agente e workflows
 Cada mudança vira uma versão imutável com rollback, e a API recusa na escrita o
 que quebraria em produção. Cada agente tem uma suíte de testes, com juiz por LLM,
 que pode travar a publicação e roda agendada, avisando no canal do time quando
-algo regride. Por cima disso vêm bases de conhecimento (RAG), ferramentas via MCP
-com confirmação humana, guardrails de dado pessoal e injeção de prompt, e
-analytics de latência e custo por execução.
+algo regride. Por cima disso vêm bases de conhecimento (RAG) sincronizadas com
+GitHub, S3, SharePoint e Google Drive, ferramentas via MCP com confirmação humana,
+guardrails de dado pessoal e injeção de prompt, controle de custo por run e por
+usuário, e os direitos do titular da LGPD (exportar e apagar os dados de uma pessoa).
 
 
 - **Multi-agente:** times que coordenam, roteiam (handoff) ou consultam
-  especialistas, e workflows com etapas em paralelo, condições e repetição.
+  especialistas, e workflows com etapas em paralelo, condições, roteador,
+  repetição e revisão humana com edição da saída.
 - **Qualidade do agente:** suíte por agente com checagem de texto, de tools e de
   juiz por LLM, gate de publicação por suíte verde, regressão entre versões e
   caso de teste criado a partir de uma conversa real, com dados pessoais mascarados.
-- **RAG:** pgvector no próprio Postgres, ingestão em background, estratégia de
-  busca por base (MMR, recência, HyDE) e custo de embedding medido.
-- **Engenharia:** 20 ADRs, ~510 testes contra Postgres real com testcontainers,
-  evals de guardrails, workflows, recuperação e da própria suíte no CI, fila
-  durável para runs em background e mypy strict.
+- **RAG:** pgvector no próprio Postgres, corte e estratégia de busca por base
+  (MMR, recência, HyDE, cross-encoder), filtros por metadados escolhidos pelo
+  modelo, conectores com webhook da origem e worker de ingestão separado.
+- **Engenharia:** 39 ADRs, ~1.160 testes contra Postgres real com testcontainers,
+  evals de guardrails, workflows, recuperação e custo no CI, fila durável para
+  runs em background, rotação de chaves sem derrubar sessão e mypy strict.
 
 `Python` · `FastAPI` · `Agno` · `PostgreSQL` · `pgvector` · `MCP` · `Next.js` · `TypeScript`
 
