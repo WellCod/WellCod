@@ -88,18 +88,27 @@ biométrico é dado sensível, e tratar assim é requisito, não enfeite.
 
 ### [k-voice](https://github.com/WellCod/k-voice) — servidor de síntese de voz com streaming em GPU
 
-Servidor TTS construído do zero para substituir a ElevenLabs: roda o Qwen3-TTS
-em GPU, entrega PCM em tempo real via WebSocket para agentes de voz no LiveKit
-e gera OGG/Opus em lote para mensagens de voz. Clonagem de voz a partir de
-áudio de referência com pré-processamento automático (loudnorm + trim de
-silêncio via ffmpeg, mínimo 5 s de fala limpa), consentimento LGPD registrado
-e instrução de estilo editável por voz. Normalização pt-BR determinística —
-moeda, datas, CPF/CNPJ, CEP, telefone, siglas, percentagens, decimais e
-palavras nativas (PIX, TV, LED). Segmentação por sentença antes da síntese
-para preservar prosódia em textos longos. Dicionário de pronúncia por cliente,
-roteamento com fallback para ElevenLabs, servidor MCP e API compatível com a
-ElevenLabs. Painel demo em `/demo` com anel de progresso adaptativo e
-recuperação de sessão após reload.
+Servidor TTS próprio para tirar da ElevenLabs um agente de voz que atende
+ligações (LiveKit/SIP) e as mensagens de áudio do WhatsApp. Roda o Qwen3-TTS,
+modelo aberto com licença comercial, atrás de uma interface única de motor:
+trocar de modelo não mexe em API, roteamento nem normalização. A fala começa
+antes de a frase terminar de ser gerada, e com a fila do motor cheia o roteador
+cai para a ElevenLabs em vez de atrasar a ligação. O serviço está pronto e
+testado; a troca espera o teste cego e a medição de latência em GPU.
+
+- **Streaming:** texto chegando em pedaços do LLM, cada frase completa vai para
+  o motor na hora e, em GPU, o primeiro áudio sai antes do fim da frase
+  (`faster-qwen3-tts`). Cancelamento imediato para quando a pessoa interrompe.
+- **pt-BR:** normalização determinística testada por tabela (moeda, datas, CPF,
+  telefone, siglas, anglicismos) e dicionário de pronúncia por cliente, que vale
+  mesmo com o termo partido entre dois pedaços do LLM.
+- **Vozes:** clonagem a partir de referência com consentimento registrado e
+  áudio cifrado em repouso, além das vozes prontas do modelo.
+- **Integração:** plugin LiveKit com fallback, lote em OGG/Opus com URL
+  assinada, servidor MCP e API compatível com a ElevenLabs (troca só a URL e a chave).
+- **Engenharia:** 8 ADRs, 176 testes com Postgres real via testcontainers,
+  mypy strict, versões do modelo fixadas e latência afirmada só com medição no
+  repositório.
 
 `Python` · `FastAPI` · `PyTorch + CUDA` · `Qwen3-TTS` · `LiveKit Agents` · `PostgreSQL` · `S3` · `MCP` · `Docker`
 
