@@ -104,15 +104,21 @@ testado; a troca espera o teste cego e a medição de latência em GPU.
 
 - **Streaming:** texto chegando em pedaços do LLM, cada frase completa vai para
   o motor na hora e, em GPU, o primeiro áudio sai antes do fim da frase
-  (`faster-qwen3-tts`). Cancelamento imediato para quando a pessoa interrompe.
+  (`faster-qwen3-tts`). Cancelamento imediato para quando a pessoa interrompe,
+  várias falas na mesma conexão e cache em memória para as frases que o agente
+  repete, que saem sem passar pela GPU.
 - **pt-BR:** normalização determinística testada por tabela (moeda, datas, CPF,
-  telefone, siglas, anglicismos) e dicionário de pronúncia por cliente, que vale
-  mesmo com o termo partido entre dois pedaços do LLM.
+  telefone, URL, unidades, número no feminino, siglas, anglicismos) e dicionário
+  de pronúncia por cliente, que vale mesmo com o termo partido entre dois pedaços
+  do LLM. A pronúncia é medida por transcrição automática: 1,7% de WER nas frases
+  de referência.
 - **Vozes:** clonagem a partir de referência com consentimento registrado e
-  áudio cifrado em repouso, além das vozes prontas do modelo.
-- **Integração:** plugin LiveKit com fallback, lote em OGG/Opus com URL
-  assinada, servidor MCP e API compatível com a ElevenLabs (troca só a URL e a chave).
-- **Engenharia:** 8 ADRs, 176 testes com Postgres real via testcontainers,
+  áudio cifrado em repouso, além das vozes prontas do modelo. Voz clonada fica
+  restrita ao cliente que coletou o consentimento.
+- **Integração:** plugin LiveKit com fallback para a voz equivalente na
+  ElevenLabs, lote em OGG/Opus com URL assinada, servidor MCP e API compatível com
+  a ElevenLabs (troca só a URL e a chave).
+- **Engenharia:** 8 ADRs, 329 testes com Postgres real via testcontainers,
   mypy strict, versões do modelo fixadas e latência afirmada só com medição no
   repositório.
 
