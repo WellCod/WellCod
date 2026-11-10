@@ -29,9 +29,10 @@ networks and security, so deployment, observability and sensitive-data handling
 are part of the first commit rather than a final step.
 
 The projects below are my own work: a platform to operate AI agents in
-production (versioned agents, multi-agent teams, workflows with human review,
-RAG with source connectors, MCP, guardrails, cost controls and per-agent test
-suites with an LLM judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs,
+production (versioned agents with gradual rollout, multi-agent teams, workflows
+with human review, RAG with source connectors, MCP, guardrails, cost controls,
+an audit trail, SSO and per-agent test suites with an LLM judge that gate
+publishing), an insurance multi-quoting platform integrating real insurer APIs,
 a fully local face authentication service with liveness detection, and a
 GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
 
@@ -44,13 +45,15 @@ GPU-based streaming TTS server with LiveKit integration and pt-BR text normaliza
 ### [Automata](https://github.com/WellCod/automata) — plataforma para operar agentes de IA em produção
 
 Quem não programa cria, testa e publica agentes, times multi-agente e workflows.
-Cada mudança vira uma versão imutável com rollback, e a API recusa na escrita o
-que quebraria em produção. Cada agente tem uma suíte de testes, com juiz por LLM,
+Cada mudança vira uma versão imutável com rollback, sai aos poucos para uma parte
+das conversas (canário) e fica numa trilha de auditoria, e a API recusa na escrita
+o que quebraria em produção. Cada agente tem uma suíte de testes, com juiz por LLM,
 que pode travar a publicação e roda agendada, avisando no canal do time quando
 algo regride. Por cima disso vêm bases de conhecimento (RAG) sincronizadas com
 GitHub, S3, SharePoint e Google Drive, ferramentas via MCP com confirmação humana,
 guardrails de dado pessoal e injeção de prompt, controle de custo por run e por
-usuário, e os direitos do titular da LGPD (exportar e apagar os dados de uma pessoa).
+usuário, os direitos do titular da LGPD (exportar e apagar os dados de uma pessoa)
+e login por SSO com o provedor de identidade da empresa.
 
 
 - **Multi-agente:** times que coordenam, roteiam (handoff) ou consultam
@@ -62,9 +65,12 @@ usuário, e os direitos do titular da LGPD (exportar e apagar os dados de uma pe
 - **RAG:** pgvector no próprio Postgres, corte e estratégia de busca por base
   (MMR, recência, HyDE, cross-encoder), filtros por metadados escolhidos pelo
   modelo, conectores com webhook da origem e worker de ingestão separado.
-- **Engenharia:** 39 ADRs, ~1.160 testes contra Postgres real com testcontainers,
-  evals de guardrails, workflows, recuperação e custo no CI, fila durável para
-  runs em background, rotação de chaves sem derrubar sessão e mypy strict.
+- **Operação:** liberação gradual por sessão com comparação de erro, latência,
+  custo e suíte entre as versões, trilha de auditoria com o antes e o depois das
+  ações de produção e SSO por OIDC com o papel vindo do grupo.
+- **Engenharia:** 42 ADRs, ~1.240 testes contra Postgres real com testcontainers,
+  evals de guardrails, workflows, recuperação, custo e SSO no CI, fila durável
+  para runs em background, rotação de chaves sem derrubar sessão e mypy strict.
 
 `Python` · `FastAPI` · `Agno` · `PostgreSQL` · `pgvector` · `MCP` · `Next.js` · `TypeScript`
 
