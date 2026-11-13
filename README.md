@@ -31,8 +31,8 @@ are part of the first commit rather than a final step.
 The projects below are my own work: a platform to operate AI agents in
 production (versioned agents with gradual rollout, multi-agent teams, workflows
 with human review, RAG with source connectors, MCP, guardrails, cost controls,
-an audit trail, SSO and per-agent test suites with an LLM judge that gate
-publishing), an insurance multi-quoting platform integrating real insurer APIs,
+an audit trail, SSO, OpenTelemetry export and per-agent test suites with an LLM
+judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs,
 a fully local face authentication service with liveness detection, and a
 GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
 
@@ -61,18 +61,20 @@ e login por SSO com o provedor de identidade da empresa.
   repetição e revisão humana com edição da saída.
 - **Qualidade do agente:** suíte por agente com checagem de texto, de tools e de
   juiz por LLM, gate de publicação por suíte verde, regressão entre versões e
-  caso de teste criado a partir de uma conversa real, com dados pessoais mascarados.
+  caso de teste criado a partir de uma conversa real, com dados pessoais mascarados,
+  e suíte que vai e volta por planilha CSV.
 - **RAG:** pgvector no próprio Postgres, corte e estratégia de busca por base
   (MMR, recência, HyDE, cross-encoder), filtros por metadados escolhidos pelo
   modelo, conectores com webhook da origem e worker de ingestão separado.
 - **Operação:** liberação gradual por sessão com comparação de erro, latência,
   custo e suíte entre as versões, trilha de auditoria com o antes e o depois das
-  ações de produção e SSO por OIDC com o papel vindo do grupo.
-- **Engenharia:** 42 ADRs, ~1.240 testes contra Postgres real com testcontainers,
+  ações de produção, SSO por OIDC com o papel vindo do grupo e traces por
+  OpenTelemetry sem o texto da conversa.
+- **Engenharia:** 43 ADRs, ~1.280 testes contra Postgres real com testcontainers,
   evals de guardrails, workflows, recuperação, custo e SSO no CI, fila durável
   para runs em background, rotação de chaves sem derrubar sessão e mypy strict.
 
-`Python` · `FastAPI` · `Agno` · `PostgreSQL` · `pgvector` · `MCP` · `Next.js` · `TypeScript`
+`Python` · `FastAPI` · `Agno` · `PostgreSQL` · `pgvector` · `MCP` · `OpenTelemetry` · `Next.js` · `TypeScript`
 
 ### [multi-K](https://github.com/WellCod/multi-k) — multicálculo e gestão de seguros
 
