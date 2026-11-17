@@ -1,11 +1,17 @@
 # Weslley Gonçalves
 
-**Software Engineer** · IA generativa e backend · São Paulo, SP
+**Engenheiro de IA** · agentes de IA em produção, LLM, RAG e MCP · São Paulo, SP
 
 Construo software que coloca IA generativa em produção: agentes, times
 multi-agente, RAG e as ferramentas para operar tudo isso com segurança,
 versionamento e custo à vista. Trabalho com **Python/FastAPI** e
 **TypeScript/Next.js**.
+
+No trabalho, opero dezenas de agentes de IA em produção, que atendem milhares
+de conversas no WhatsApp e por voz, sobre uma plataforma interna de atendimento
+que construí com o time e que substituiu um fornecedor externo a cerca de um
+décimo do custo. Fiz parte do time de tecnologia do projeto que a Meta
+reconheceu como case global de soluções via WhatsApp.
 
 Antes de escrever software, passei mais de uma década sustentando
 infraestrutura, redes e segurança. Por isso deploy, observabilidade e dado
@@ -18,11 +24,17 @@ sensível entram no primeiro commit, não na última etapa.
 
 <br>
 
-Software Engineer focused on generative AI and backend, based in São Paulo, Brazil.
+AI Engineer focused on AI agents in production, LLMs, RAG and MCP, based in São Paulo, Brazil.
 
 I build software that puts generative AI into production: agents, multi-agent
 teams, RAG, and the tooling to operate them with versioning, safety and visible
 cost. I work with **Python/FastAPI** and **TypeScript/Next.js**.
+
+At work I run dozens of AI agents in production, handling thousands of
+conversations on WhatsApp and voice, on an internal customer service platform I
+built with my team that replaced an external vendor at about one tenth of the
+cost. I was part of the technology team on the project Meta recognized as a
+global case study for WhatsApp solutions.
 
 Before writing software I spent more than a decade running infrastructure,
 networks and security, so deployment, observability and sensitive-data handling
@@ -149,6 +161,6 @@ testado; a troca espera o teste cego e a medição de latência em GPU.
 | **Backend** | Python · FastAPI · SQLAlchemy · Alembic · Node.js · Express |
 | **Frontend** | TypeScript · React · Next.js · Tailwind CSS · TanStack Query |
 | **Dados** | PostgreSQL · pgvector · Redis · SQLite · MongoDB |
-| **Infra e DevOps** | Docker · Docker Compose · Nginx · Linux · GitHub Actions |
+| **Infra e DevOps** | AWS (EC2, S3) · Docker · Docker Compose · Nginx · Linux · GitHub Actions · Datadog |
 | **Fundamentos** | Redes (TCP/IP, DNS, VPN) · Segurança da informação · LGPD |
 
