@@ -50,6 +50,8 @@ GPU-based streaming TTS server with LiveKit integration and pt-BR text normaliza
 
 I also built Pixelwork, a 2D pixel-art coworking space with proximity voice and
 video, private meeting rooms, a map editor, and mobile destination navigation.
+The sign-in screen previews the office, and the demo features a Portuguese-speaking
+AI receptionist that runs locally without API keys.
 
 </details>
 
@@ -97,13 +99,23 @@ Escritório 2D em tempo real com voz e vídeo por proximidade, reuniões privada
 editor de mapas. A demo inclui avatares e mesas personalizáveis, navegação por
 destinos no celular e partidas de pingue-pongue e pebolim contra outra pessoa ou um bot.
 
+- **Prévia antes do login.** A tela de entrada mostra a Sala Aurora, o lounge e
+  a área de jogos em pixel art.
+- **Recepcionista com voz local.** Na demo, a IA atende por proximidade em
+  português e consulta o mapa e o estado do coworking. Faster Whisper, Qwen e
+  Piper rodam na máquina que hospeda a demo, sem chave de API.
+
 O servidor valida movimento, partidas e acesso às salas. No navegador, predição
 de passos e interpolação deixam a movimentação fluida. O LiveKit entrega a mídia
 e o GitHub Actions verifica testes, Docker e o fluxo de proximidade no Chromium.
 
 `TypeScript` · `React` · `Phaser` · `Fastify` · `WebSocket` · `PostgreSQL` · `LiveKit`
 
-[Telas da demo](https://github.com/WellCod/Pixelwork#telas)
+| Prévia do escritório | Recepcionista em atendimento |
+| --- | --- |
+| [![Tela de entrada com a Sala Aurora, o lounge e a área de jogos](https://raw.githubusercontent.com/WellCod/Pixelwork/b1b1da1f100c477d8bfeeb7458998d3ef9ce87a5/docs/prints/entrada-previa.png)](https://github.com/WellCod/Pixelwork#prévia-antes-do-login) | [![Recepcionista de IA falando na demo com o painel de voz local aberto](https://raw.githubusercontent.com/WellCod/Pixelwork/b1b1da1f100c477d8bfeeb7458998d3ef9ce87a5/docs/prints/recepcao-voz-local.png)](https://github.com/WellCod/Pixelwork#recepcionista-com-voz-local) |
+
+[Telas da demo](https://github.com/WellCod/Pixelwork#telas) · [Configuração e medições de voz local](https://github.com/WellCod/Pixelwork#recepcionista-com-voz-local)
 
 ### [multi-K](https://github.com/WellCod/multi-k) — multicálculo e gestão de seguros
 
