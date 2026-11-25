@@ -44,8 +44,7 @@ The projects below are my own work: a platform to operate AI agents in
 production (versioned agents with gradual rollout, multi-agent teams, workflows
 with human review, RAG with source connectors, MCP, guardrails, cost controls,
 an audit trail, SSO, OpenTelemetry export and per-agent test suites with an LLM
-judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs,
-a fully local face authentication service with liveness detection, and a
+judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs, and a
 GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
 
 I also built Pixelwork, a 2D pixel-art coworking space with proximity voice and
@@ -122,14 +121,6 @@ real de uma seguradora: JWT ES256, fila de trabalho no próprio Postgres, RLS po
 corretora e auditoria append-only.
 
 `Python` · `FastAPI` · `PostgreSQL` · `React` · `TypeScript` · `Docker`
-
-### [FaceGate](https://github.com/WellCod/face-gate) — autenticação facial com liveness
-
-Reconhecimento facial com detecção de vivacidade por piscar, rodando **100%
-local**. Sobe com um `docker compose up` e nenhum frame sai da máquina. Dado
-biométrico é dado sensível, e tratar assim é requisito, não enfeite.
-
-`Python` · `FastAPI` · `DeepFace/ArcFace` · `MediaPipe` · `Docker`
 
 ### [k-voice](https://github.com/WellCod/k-voice) — servidor de síntese de voz com streaming em GPU
 
