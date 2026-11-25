@@ -2,20 +2,13 @@
 
 **Engenheiro de IA** · agentes de IA em produção, LLM, RAG e MCP · São Paulo, SP
 
-Construo software que coloca IA generativa em produção: agentes, times
-multi-agente, RAG e as ferramentas para operar tudo isso com segurança,
-versionamento e custo à vista. Trabalho com **Python/FastAPI** e
-**TypeScript/Next.js**.
+Trabalho com **Python/FastAPI** e **TypeScript/Next.js**. No trabalho, opero dezenas
+de agentes em produção que atendem milhares de conversas no WhatsApp e por voz.
+Com o time, construí a plataforma interna que substituiu um fornecedor externo a
+cerca de um décimo do custo. Também integrei o time de tecnologia de um projeto
+reconhecido pela Meta como case global de soluções via WhatsApp.
 
-No trabalho, opero dezenas de agentes de IA em produção, que atendem milhares
-de conversas no WhatsApp e por voz, sobre uma plataforma interna de atendimento
-que construí com o time e que substituiu um fornecedor externo a cerca de um
-décimo do custo. Fiz parte do time de tecnologia do projeto que a Meta
-reconheceu como case global de soluções via WhatsApp.
-
-Antes de escrever software, passei mais de uma década sustentando
-infraestrutura, redes e segurança. Por isso deploy, observabilidade e dado
-sensível entram no primeiro commit, não na última etapa.
+Antes de escrever software, passei mais de uma década em infraestrutura, redes e segurança.
 
 [LinkedIn](https://linkedin.com/in/wellcod) · weslleygoncalves18@gmail.com
 
@@ -24,33 +17,15 @@ sensível entram no primeiro commit, não na última etapa.
 
 <br>
 
-AI Engineer focused on AI agents in production, LLMs, RAG and MCP, based in São Paulo, Brazil.
+AI Engineer in São Paulo, Brazil. I work with Python/FastAPI and TypeScript/Next.js.
+I operate dozens of production AI agents that handle thousands of conversations over
+WhatsApp and voice. The platform I built with my team replaced an external vendor at
+about one tenth of the cost. I also worked on a project Meta recognized as a global
+WhatsApp case study.
 
-I build software that puts generative AI into production: agents, multi-agent
-teams, RAG, and the tooling to operate them with versioning, safety and visible
-cost. I work with **Python/FastAPI** and **TypeScript/Next.js**.
-
-At work I run dozens of AI agents in production, handling thousands of
-conversations on WhatsApp and voice, on an internal customer service platform I
-built with my team that replaced an external vendor at about one tenth of the
-cost. I was part of the technology team on the project Meta recognized as a
-global case study for WhatsApp solutions.
-
-Before writing software I spent more than a decade running infrastructure,
-networks and security, so deployment, observability and sensitive-data handling
-are part of the first commit rather than a final step.
-
-The projects below are my own work: a platform to operate AI agents in
-production (versioned agents with gradual rollout, multi-agent teams, workflows
-with human review, RAG with source connectors, MCP, guardrails, cost controls,
-an audit trail, SSO, OpenTelemetry export and per-agent test suites with an LLM
-judge that gate publishing), an insurance multi-quoting platform integrating real insurer APIs, and a
-GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
-
-I also built Pixelwork, a 2D pixel-art coworking space with proximity voice and
-video, private meeting rooms, a map editor, and mobile destination navigation.
-The sign-in screen previews the office, and the demo features a Portuguese-speaking
-AI receptionist that runs locally without API keys.
+My portfolio includes Automata for operating AI agents, Pixelwork for real-time
+collaboration with a local Portuguese-speaking AI receptionist, multi-K for insurance
+quoting, and k-voice for GPU-streamed speech synthesis.
 
 </details>
 
@@ -60,53 +35,31 @@ AI receptionist that runs locally without API keys.
 
 ### [Automata](https://github.com/WellCod/automata) — plataforma para operar agentes de IA em produção
 
-Quem não programa cria, testa e publica agentes, times multi-agente e workflows.
-Cada mudança vira uma versão imutável com rollback, sai aos poucos para uma parte
-das conversas (canário) e fica numa trilha de auditoria, e a API recusa na escrita
-o que quebraria em produção. Cada agente tem uma suíte de testes, com juiz por LLM,
-que pode travar a publicação e roda agendada, avisando no canal do time quando
-algo regride. Por cima disso vêm bases de conhecimento (RAG) sincronizadas com
-GitHub, S3, SharePoint e Google Drive, ferramentas via MCP com confirmação humana,
-guardrails de dado pessoal e injeção de prompt, controle de custo por run e por
-usuário, os direitos do titular da LGPD (exportar e apagar os dados de uma pessoa)
-e login por SSO com o provedor de identidade da empresa.
+Plataforma para equipes criarem e operarem agentes sem programar. As versões são
+imutáveis, com auditoria, implantação gradual e rollback.
 
-
-- **Multi-agente:** times que coordenam, roteiam (handoff) ou consultam
-  especialistas, e workflows com etapas em paralelo, condições, roteador,
-  repetição e revisão humana com edição da saída.
-- **Qualidade do agente:** suíte por agente com checagem de texto, de tools e de
-  juiz por LLM, gate de publicação por suíte verde, regressão entre versões e
-  caso de teste criado a partir de uma conversa real, com dados pessoais mascarados,
-  e suíte que vai e volta por planilha CSV.
-- **RAG:** pgvector no próprio Postgres, corte e estratégia de busca por base
-  (MMR, recência, HyDE, cross-encoder), filtros por metadados escolhidos pelo
-  modelo, conectores com webhook da origem e worker de ingestão separado.
-- **Operação:** liberação gradual por sessão com comparação de erro, latência,
-  custo e suíte entre as versões, trilha de auditoria com o antes e o depois das
-  ações de produção, SSO por OIDC com o papel vindo do grupo e traces por
-  OpenTelemetry sem o texto da conversa.
-- **Engenharia:** 43 ADRs, ~1.280 testes contra Postgres real com testcontainers,
-  evals de guardrails, workflows, recuperação, custo e SSO no CI, fila durável
-  para runs em background, rotação de chaves sem derrubar sessão e mypy strict.
+- **Agentes e workflows.** Handoff entre especialistas, etapas paralelas, revisão
+  humana e ferramentas MCP com confirmação.
+- **RAG e governança.** Busca no pgvector, conectores para GitHub, S3,
+  SharePoint e Google Drive, SSO por OIDC, guardrails de dados pessoais e controles
+  de custo por execução e usuário.
+- **Qualidade e operação.** Suítes por agente com juiz por LLM podem bloquear a
+  publicação. O canário compara erros, latência e custo, com traces OpenTelemetry
+  sem o texto da conversa.
+- **Engenharia.** 43 ADRs, ~1.280 testes com PostgreSQL via Testcontainers, fila
+  durável e rotação de chaves durante a sessão.
 
 `Python` · `FastAPI` · `Agno` · `PostgreSQL` · `pgvector` · `MCP` · `OpenTelemetry` · `Next.js` · `TypeScript`
 
 ### [Pixelwork](https://github.com/WellCod/Pixelwork) — coworking virtual em pixel art
 
-Escritório 2D em tempo real com voz e vídeo por proximidade, reuniões privadas e
-editor de mapas. A demo inclui avatares e mesas personalizáveis, navegação por
-destinos no celular e partidas de pingue-pongue e pebolim contra outra pessoa ou um bot.
+Escritório 2D com mídia por proximidade, reuniões privadas, editor de mapas e
+minijogos. O servidor valida movimentos e acesso às salas, e o cliente prevê os
+passos e interpola os avatares.
 
-- **Prévia antes do login.** A tela de entrada mostra a Sala Aurora, o lounge e
-  a área de jogos em pixel art.
-- **Recepcionista com voz local.** Na demo, a IA atende por proximidade em
-  português e consulta o mapa e o estado do coworking. Faster Whisper, Qwen e
-  Piper rodam na máquina que hospeda a demo, sem chave de API.
-
-O servidor valida movimento, partidas e acesso às salas. No navegador, predição
-de passos e interpolação deixam a movimentação fluida. O LiveKit entrega a mídia
-e o GitHub Actions verifica testes, Docker e o fluxo de proximidade no Chromium.
+- **Prévia antes do login.** A tela de entrada mostra a Sala Aurora, o lounge e a área de jogos.
+- **Recepcionista com voz local.** Atende em português e destaca rotas no mapa.
+  Faster Whisper, Qwen e Piper rodam na máquina da demo, sem chave de API.
 
 `TypeScript` · `React` · `Phaser` · `Fastify` · `WebSocket` · `PostgreSQL` · `LiveKit`
 
@@ -124,33 +77,16 @@ corretora e auditoria append-only.
 
 ### [k-voice](https://github.com/WellCod/k-voice) — servidor de síntese de voz com streaming em GPU
 
-Servidor TTS próprio para tirar da ElevenLabs um agente de voz que atende
-ligações (LiveKit/SIP) e as mensagens de áudio do WhatsApp. Roda o Qwen3-TTS,
-modelo aberto com licença comercial, atrás de uma interface única de motor:
-trocar de modelo não mexe em API, roteamento nem normalização. A fala começa
-antes de a frase terminar de ser gerada, e com a fila do motor cheia o roteador
-cai para a ElevenLabs em vez de atrasar a ligação. O serviço está pronto e
-testado; a troca espera o teste cego e a medição de latência em GPU.
+Servidor Qwen3-TTS para chamadas via LiveKit/SIP e áudios de WhatsApp. A adoção
+no atendimento aguarda o teste cego e a medição de latência em GPU.
 
-- **Streaming:** texto chegando em pedaços do LLM, cada frase completa vai para
-  o motor na hora e, em GPU, o primeiro áudio sai antes do fim da frase
-  (`faster-qwen3-tts`). Cancelamento imediato para quando a pessoa interrompe,
-  várias falas na mesma conexão e cache em memória para as frases que o agente
-  repete, que saem sem passar pela GPU.
-- **pt-BR:** normalização determinística testada por tabela (moeda, datas, CPF,
-  telefone, URL, unidades, número no feminino, siglas, anglicismos) e dicionário
-  de pronúncia por cliente, que vale mesmo com o termo partido entre dois pedaços
-  do LLM. A pronúncia é medida por transcrição automática: 1,7% de WER nas frases
-  de referência.
-- **Vozes:** clonagem a partir de referência com consentimento registrado e
-  áudio cifrado em repouso, além das vozes prontas do modelo. Voz clonada fica
-  restrita ao cliente que coletou o consentimento.
-- **Integração:** plugin LiveKit com fallback para a voz equivalente na
-  ElevenLabs, lote em OGG/Opus com URL assinada, servidor MCP e API compatível com
-  a ElevenLabs (troca só a URL e a chave).
-- **Engenharia:** 8 ADRs, 329 testes com Postgres real via testcontainers,
-  mypy strict, versões do modelo fixadas e latência afirmada só com medição no
-  repositório.
+- **Streaming.** Sintetiza enquanto recebe texto do LLM, permite interrupção
+  e reutiliza falas frequentes em cache. O fallback para ElevenLabs cobre fila cheia.
+- **Português do Brasil.** Normalização determinística e dicionário por cliente.
+  A transcrição automática mediu 1,7% de WER nas frases de referência.
+- **Vozes e integração.** Clonagem com consentimento e referências cifradas, plugin
+  LiveKit, síntese em lote, MCP e API compatível com ElevenLabs.
+- **Engenharia.** 8 ADRs, 329 testes com PostgreSQL via Testcontainers e mypy strict.
 
 `Python` · `FastAPI` · `PyTorch + CUDA` · `Qwen3-TTS` · `LiveKit Agents` · `PostgreSQL` · `S3` · `MCP` · `Docker`
 
