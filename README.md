@@ -48,6 +48,9 @@ judge that gate publishing), an insurance multi-quoting platform integrating rea
 a fully local face authentication service with liveness detection, and a
 GPU-based streaming TTS server with LiveKit integration and pt-BR text normalization.
 
+I also built Pixelwork, a 2D pixel-art coworking space with proximity voice and
+video, private meeting rooms, a map editor, and mobile destination navigation.
+
 </details>
 
 ---
@@ -87,6 +90,20 @@ e login por SSO com o provedor de identidade da empresa.
   para runs em background, rotação de chaves sem derrubar sessão e mypy strict.
 
 `Python` · `FastAPI` · `Agno` · `PostgreSQL` · `pgvector` · `MCP` · `OpenTelemetry` · `Next.js` · `TypeScript`
+
+### [Pixelwork](https://github.com/WellCod/Pixelwork) — coworking virtual em pixel art
+
+Escritório 2D em tempo real com voz e vídeo por proximidade, reuniões privadas e
+editor de mapas. A demo inclui avatares e mesas personalizáveis, navegação por
+destinos no celular e partidas de pingue-pongue e pebolim contra outra pessoa ou um bot.
+
+O servidor valida movimento, partidas e acesso às salas. No navegador, predição
+de passos e interpolação deixam a movimentação fluida. O LiveKit entrega a mídia
+e o GitHub Actions verifica testes, Docker e o fluxo de proximidade no Chromium.
+
+`TypeScript` · `React` · `Phaser` · `Fastify` · `WebSocket` · `PostgreSQL` · `LiveKit`
+
+[Telas da demo](https://github.com/WellCod/Pixelwork#telas)
 
 ### [multi-K](https://github.com/WellCod/multi-k) — multicálculo e gestão de seguros
 
