@@ -62,6 +62,7 @@ passos e interpola os avatares.
   Faster Whisper, Qwen e Piper rodam na máquina da demo, sem chave de API.
 - **Aquário e corrida multiplayer.** Alimente os animais do aquário interativo ou
   dispute uma corrida 1x1 com um jogador em cada fliperama.
+- **Compartilhamento de tela.** Apresente uma janela, aba ou tela em salas de reunião e chamadas privadas.
 
 `TypeScript` · `React` · `Phaser` · `Fastify` · `WebSocket` · `PostgreSQL` · `LiveKit`
 
