@@ -60,6 +60,8 @@ passos e interpola os avatares.
 - **Prévia antes do login.** A tela de entrada mostra a Sala Aurora, o lounge e a área de jogos.
 - **Recepcionista com voz local.** Atende em português e destaca rotas no mapa.
   Faster Whisper, Qwen e Piper rodam na máquina da demo, sem chave de API.
+- **Aquário e corrida multiplayer.** Alimente os animais do aquário interativo ou
+  dispute uma corrida 1x1 com um jogador em cada fliperama.
 
 `TypeScript` · `React` · `Phaser` · `Fastify` · `WebSocket` · `PostgreSQL` · `LiveKit`
 
