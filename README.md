@@ -62,7 +62,7 @@ passos e interpola os avatares.
   Faster Whisper, Qwen e Piper rodam na máquina da demo, sem chave de API.
 - **Aquário e corrida multiplayer.** Alimente os animais do aquário interativo ou
   dispute uma corrida 1x1 com um jogador em cada fliperama.
-- **Compartilhamento de tela.** Em salas de reunião e chamadas privadas, quem recebe pode assistir em tela cheia, minimizar e restaurar o vídeo ou arrastar a janela flutuante para continuar vendo o mapa. Para redimensionar a janela, arraste a alça no canto inferior direito. Ao reabrir a janela flutuante no mesmo navegador, ela recupera a posição e o tamanho salvos.
+- **Compartilhamento de tela.** Em salas de reunião e chamadas privadas, a nova interface permite assistir em tela cheia, minimizar e restaurar o vídeo ou usar uma janela flutuante sobre o mapa. Quem recebe pode mover e redimensionar a janela, reabrir com os ajustes salvos no mesmo navegador e usar **Redefinir janela** para voltar à posição e ao tamanho padrão.
 
 `TypeScript` · `React` · `Phaser` · `Fastify` · `WebSocket` · `PostgreSQL` · `LiveKit`
 
